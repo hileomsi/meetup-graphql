@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Graphql Client</title>
+</head>
+<body>
+  <h1>Open you console</h1>
+  <h2>GraphQL Client</h2>
+  <pre>
+    Config client
+    
+    GraphQl.endpoint = "your-endpoint"
+  </pre>
+  <hr />
+  <pre>
+    Exec
+
+    GraphQl.exec(`
+      query|mutation {
+        {your queries}|{your mutations}
+      }
+    `);
+  </pre>
+  <h3>Examples</h3>
+  <pre>
+    GraphQl.exec(`
+      query {
+        allScores
+      }
+    `).then(console.log);
+  </pre>
+  <hr />
+  <pre>
+    GraphQl.exec(`
+      query {
+        findAllContries {
+          name
+          description
+          allScores
+          foods {
+            name
+            scores
+          }
+        }
+      }
+    `).then(console.log);
+  </pre>
+  <hr />
+  <pre>
+    GraphQl.exec(`
+      query {
+        getCountry(id: 1) {
+          name
+          description
+          foods {
+            name
+            scores
+          }
+        }
+      }
+    `).then(console.log);
+  </pre>
+  <hr />
+  <pre>
+    GraphQl.exec(`
+      mutation {
+        createContry(
+          name: "Argentina"
+          description: "Repellat aperiam illo magnam numquam et ipsum qui."
+          foods: [{ name: "Churras", scores: 9 }, { name: "Locro", scores: 7 }]
+        ) {
+          name
+          description
+          foods {
+            name
+            scores
+          }
+        }
+      }
+    `).then(console.log);
+  </pre>
+  <script>
+    const GraphQl = {
+      endpoint: 'http://localhost:4000',
+      exec: (query, variaveis) => {
+        return fetch(GraphQl.endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query, variaveis }),
+        }).then(response => response.json());
+      },
+    };
+  </script>
+</body>
+</html>

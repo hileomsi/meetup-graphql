@@ -1,0 +1,8 @@
+{
+  "name": "client-graphql-basic",
+  "version": "1.0.0",
+  "description": "Example graphql client (basic)",
+  "main": "index.js",
+  "author": "Hiléo Andersson",
+  "license": "MIT"
+}

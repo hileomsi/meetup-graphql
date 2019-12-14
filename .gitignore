@@ -1,0 +1,42 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+ionic-react-travel-and-foods/node_modules
+ionic-react-travel-and-foods/.pnp
+ionic-react-travel-and-foods/.pnp.js
+
+# testing
+ionic-react-travel-and-foods/coverage
+
+# production
+ionic-react-travel-and-foods/build
+
+# misc
+ionic-react-travel-and-foods/.DS_Store
+ionic-react-travel-and-foods/.env.local
+ionic-react-travel-and-foods/.env.development.local
+ionic-react-travel-and-foods/.env.test.local
+ionic-react-travel-and-foods/.env.production.local
+ionic-react-travel-and-foods/.vscode
+
+ionic-react-travel-and-foods/npm-debug.log*
+ionic-react-travel-and-foods/yarn-debug.log*
+ionic-react-travel-and-foods/yarn-error.log*
+
+node-graphql-basic/node_modules
+
+reactNativeTravelAndFoods/node_modules/**/*
+reactNativeTravelAndFoods/.expo/*
+reactNativeTravelAndFoods/npm-debug.*
+reactNativeTravelAndFoods/*.jks
+reactNativeTravelAndFoods/*.p8
+reactNativeTravelAndFoods/*.p12
+reactNativeTravelAndFoods/*.key
+reactNativeTravelAndFoods/*.mobileprovision
+reactNativeTravelAndFoods/*.orig.*
+reactNativeTravelAndFoods/web-build/
+reactNativeTravelAndFoods/web-report/
+
+# macOS
+reactNativeTravelAndFoods/.DS_Store
+

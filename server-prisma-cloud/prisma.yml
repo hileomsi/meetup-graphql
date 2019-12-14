@@ -1,0 +1,6 @@
+endpoint: https://eu1.prisma.sh/hileo-andersson-7e90a0/server-prisma-cloud/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: typescript-client
+    output: ./generated/prisma-client/

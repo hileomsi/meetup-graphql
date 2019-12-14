@@ -1,0 +1,11 @@
+{
+  "name": "node-graphql-basic",
+  "version": "1.0.0",
+  "description": "Example Node with graphql (basic)",
+  "main": "index.js",
+  "author": "Hiléo Andersson",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
